@@ -5,7 +5,7 @@ minor=192
 mode="666"
 group=0
 
-function load() {
+load() {
     insmod ./$module.ko $* || exit 1
 
     rm -f /dev/${device}
@@ -17,7 +17,7 @@ function load() {
     chmod $mode /dev/${device}
 }
 
-function unload() {
+unload() {
     rm -f /dev/${device}
     rmmod $module || exit 1
 }
