@@ -1,4 +1,5 @@
 #! /bin/sh
+# get debug log sudo tail -f /sys/kernel/debug/dynamic_debug/control
 module="usb_skel"
 device="usb_skel"
 minor=192
